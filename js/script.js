@@ -6,6 +6,16 @@ $(document).ready (
         var source = $("#entry-template").html();
         var template = Handlebars.compile(source);
 
+        var list = ["Pane", "Birra", "Vino", "Salsa"];
+
+        for (var i = 0; i < list.length; i++) {
+            var context = {
+                'text': list[i],
+            }
+            var html = template(context);
+            $("#to-do").append(html);
+        }
+
         $(document).on( "click", ".delete",
             function () {
                 $(this).parent().remove();
