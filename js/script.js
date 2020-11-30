@@ -28,18 +28,22 @@ $(document).ready (
 
                 if (userInput == "") {
                     alert("Campo vuoto");
+                } else if (checkIfElementAlreadyExist (list, userInput)) {
+                    alert("Opzione già esistente");
                 } else {
                     var context = {
                         'text': userInput,
                     }
                     var html = template(context);
                     $("#to-do").append(html);
+                    list.push(userInput);
                 }
 
             }
         );
 
-        $("#user-input").keyup(function(event){
+        $("#user-input").keyup(
+            function(event){
                 if (event.which == 13 || event.keyCode == 13) {
                     confirmButton.trigger("click");
                 }
@@ -48,3 +52,12 @@ $(document).ready (
 
     }
 );
+
+function checkIfElementAlreadyExist (array, element) {
+    for (var i = 0; i < array.length; i++) {
+        if (element == array[i]) {
+            return true;
+        }
+    }
+    return false;
+}
