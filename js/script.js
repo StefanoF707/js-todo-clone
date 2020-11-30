@@ -1,12 +1,10 @@
-// creare una to-do list, come quella fatta insieme stamattina, utilizzando Handlebars come templating engine.
-
 $(document).ready (
     function () {
+
         var confirmButton = $("#confirm_btn");
 
         var source = $("#entry-template").html();
         var template = Handlebars.compile(source);
-
 
         $(document).on( "click", ".delete",
             function () {
@@ -32,11 +30,11 @@ $(document).ready (
         );
 
         $("#user-input").keyup(function(event){
-            if (event.which == 13 || event.keyCode == 13) {
-                confirmButton.trigger("click");
+                if (event.which == 13 || event.keyCode == 13) {
+                    confirmButton.trigger("click");
+                }
             }
-        });
-
+        );
 
     }
 );

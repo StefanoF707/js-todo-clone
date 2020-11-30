@@ -11,12 +11,19 @@
 </head>
 <body>
 
-    <input type="text" id="user-input" name="text-field" value="" placeholder="Scrivi qui">
-    <button type="button" id="confirm_btn" name="button">Conferma</button>
+    <h1>LA TUA TODO LIST</h1>
 
-    <ul id="to-do"></ul>
+    <div class="container">
+        <div class="container-top">
+            <input type="text" id="user-input" name="text-field" value="" placeholder="Scrivi qui">
 
+            <button type="button" id="confirm_btn" name="button">Aggiungi</button>
+        </div>
 
+        <div class="container-bottom">
+            <ul id="to-do"></ul>
+        </div>
+    </div>
 
     <script id="entry-template" type="text/x-handlebars-template">
         <li>{{text}} <span class="delete">X</span></li>
