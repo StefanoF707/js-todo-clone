@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.js" integrity="sha512-MQkEjxbZvzs4TX8ES4/tTIyaYdtDlJzVocnPo0GoysTR0jCmNg0P2is7uqpCoWxmoS9X84CDVzuWgZD/R/Q2oQ==" crossorigin="anonymous"></script>
+    <script src="js/script.js" charset="utf-8"></script>
+    <title>To do list - Handlebars</title>
+</head>
+<body>
+
+    <input type="text" id="user-input" name="text-field" value="" placeholder="Scrivi qui">
+    <button type="button" id="confirm_btn" name="button">Conferma</button>
+
+    <ul id="to-do"></ul>
+
+
+
+    <script id="entry-template" type="text/x-handlebars-template">
+        <li>{{text}} <span class="delete">X</span></li>
+    </script>
+
+</body>
+</html>
